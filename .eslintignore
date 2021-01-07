@@ -3,3 +3,4 @@ js/*
 build/*
 server/*
 node_modules/*
+libs/*

@@ -1,13 +1,14 @@
-import './App.css'
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>MILESTONE 1 CALCULATOR APP</h1>
+        <h1>CALCULATOR APP</h1>
+        <h2>MILESTONE 1</h2>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

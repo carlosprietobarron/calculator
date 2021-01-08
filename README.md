@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[HowsTheWeather](https://react-mycalculator.herokuapp.com/)
+[CALCULATOR ON HEROKU](https://react-mycalculator.herokuapp.com/)
 
 ## How to install
 

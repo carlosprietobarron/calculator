@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable react/prop-types, no-console */
-function Bttn(props) {
+function Buttn(props) {
   const { name } = props;
   return (
     <div>
@@ -10,5 +10,5 @@ function Bttn(props) {
   );
 }
 
-export default Bttn;
+export default Buttn;
 /* eslint-enable react/prop-types, no-console */

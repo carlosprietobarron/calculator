@@ -1,12 +1,12 @@
 import React from 'react';
-import { Bttn } from './btn';
+import { Buttn } from './btn';
 
 function BtnPanel() {
   return (
     <div>
-      <Bttn name= "boton1" />
-      <Bttn name= "boton2" />
-      <Bttn name= "boton3" />
+      <Buttn name="boton1" />
+      <Buttn name="boton2" />
+      <Buttn name="boton3" />
     </div>
   );
 }

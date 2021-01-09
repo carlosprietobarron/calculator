@@ -1,5 +1,7 @@
 import React from 'react';
-import Buttn from './Buttn';
+import Buttn from './Buttn.js';
+
+conts group1 = []
 
 function BtnPanel() {
   return (

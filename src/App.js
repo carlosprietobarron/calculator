@@ -1,10 +1,12 @@
 import './App.css';
+import BtnPanel from './components/BtnPanel';
+import Display from './components/Display';
 
 function App() {
   return (
     <div className="App">
-      <h1>CALCULATOR</h1>
-      <h2>Milestone 1</h2>
+      <Display />
+      <BtnPanel />
     </div>
   );
 }

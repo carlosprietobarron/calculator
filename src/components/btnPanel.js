@@ -1,5 +1,5 @@
 import React from 'react';
-import { Buttn } from './Buttn';
+import Buttn from './Buttn';
 
 function BtnPanel() {
   return (

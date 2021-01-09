@@ -1,7 +1,4 @@
 import './App.css';
-import Display from './components/display'
-import BtnPanel from './components/btnPanel'
-
 
 function App() {
   return (

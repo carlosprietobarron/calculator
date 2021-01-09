@@ -1,8 +1,8 @@
 import React from 'react';
 
-/* eslint-disable react/prop-types, no-console*/
+/* eslint-disable react/prop-types, no-console */
 function Bttn(props) {
-  const {name} = props;
+  const { name } = props;
   return (
     <div>
       <button type="button">{name}</button>
@@ -10,5 +10,5 @@ function Bttn(props) {
   );
 }
 
-export  { Bttn };
-/* eslint-enable react/prop-types, no-console*/
+export default Bttn;
+/* eslint-enable react/prop-types, no-console */

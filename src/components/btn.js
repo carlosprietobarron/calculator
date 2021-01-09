@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-function Btn(props) {
-  console.log(props)
-
+/* eslint-disable react/prop-types, no-console*/
+function Bttn(props) {
+  const {name} = props;
   return (
     <div>
-      <button>{props.name}</button>
+      <button type="button">{name}</button>
     </div>
-  )
+  );
 }
 
-export { Btn }
+export  { Bttn };
+/* eslint-enable react/prop-types, no-console*/

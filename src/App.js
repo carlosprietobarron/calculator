@@ -1,15 +1,16 @@
 import './App.css';
+import React from 'react';
 import BtnPanel from './components/BtnPanel.js';
 import Display from './components/Display.js';
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <div className="calc-ui">
-        <Display />
+        <Display result={0}/>
         <BtnPanel />
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

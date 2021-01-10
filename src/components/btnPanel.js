@@ -93,16 +93,16 @@ function Btngroup(props) {
   const { group } = props;
   return (
     <div className="btn-group" id="loop1">
-      {group.map(btn=>(
-        <Buttn name={btn.name} symbol={btn.symbol}/>
+      {group.map(btn => (
+        <Buttn key={btn.name} name={btn.name} symbol={btn.symbol} />
       ))}
     </div>
-  );  
+  );
 }
 
 function ButtonPanel() {
   return (
-    <div className='btn-panel'>
+    <div className="btn-panel">
       <Btngroup group={group1} />
       <Btngroup group={group2} />
       <Btngroup group={group3} />

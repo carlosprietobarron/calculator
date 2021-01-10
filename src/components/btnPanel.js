@@ -12,12 +12,12 @@ const group1 = [
   },
   {
     name: 'percent',
-    symbol:'%',
+    symbol: '%',
   },
   {
     name: 'div',
     symbol: '÷',
-  }
+  },
 ];
 const group2 = [
   {
@@ -27,7 +27,7 @@ const group2 = [
   {
     name: 'eight',
     symbol: '8',
-  }, 
+  },
   {
     name: 'nine',
     symbol: '9',
@@ -35,17 +35,17 @@ const group2 = [
   {
     name: 'multiply',
     symbol: 'X',
-  }
+  },
 ];
 const group3 = [
   {
     name: 'four',
     symbol: '4',
   },
-  { 
+  {
     name: 'five',
-    symbol:'5',
-  }, 
+    symbol: '5',
+  },
   {
     name: 'six',
     symbol: '6',
@@ -53,17 +53,17 @@ const group3 = [
   {
     name: 'minus',
     symbol: '-',
-  }
+  },
 ];
 const group4 = [
   {
     name: 'one',
     symbol: '1',
   },
-  { 
+  {
     name: 'two',
     symbol: '2',
-  }, 
+  },
   {
     name: 'three',
     symbol: '3',
@@ -71,27 +71,25 @@ const group4 = [
   {
     name: 'add',
     symbol: '+',
-  }
+  },
 ];
 const group5 = [
   {
     name: 'zero',
     symbol: '0',
   },
-  { 
+  {
     name: 'point',
     symbol: '.',
-  }, 
+  },
   {
     name: 'equal',
     symbol: '=',
-  }
+  },
 ];
 
-
-function Btngroup(props){
-  console.log( 'group 1', props);
-  const {  group } = props;
+function Btngroup(props) {
+  const { group } = props;
   return (
     <div className='btn-group' id='loop1'>
         {group.map(btn=>(

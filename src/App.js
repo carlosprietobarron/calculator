@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import BtnPanel from './components/BtnPanel.js';
+import ButtonPanel from './components/BtnPanel.js';
 import Display from './components/Display.js';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <React.Fragment>
       <div className="calc-ui">
         <Display result={0}/>
-        <BtnPanel />
+        <ButtonPanel />
       </div>
     </React.Fragment>
   );

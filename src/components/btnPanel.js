@@ -101,7 +101,7 @@ function Btngroup(props){
   );  
 }
 
-function BtnPanel() {
+function ButtonPanel() {
   return (
     <div className="btn-panel">
       <Btngroup group={group1}/>
@@ -113,4 +113,4 @@ function BtnPanel() {
   );
 }
 
-export default BtnPanel;
+export default ButtonPanel;

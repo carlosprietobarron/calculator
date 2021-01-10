@@ -41,15 +41,13 @@
   align-content: space-around;
 }
 
-
-
 .btn-group {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.div-key{
+.div-key {
   width: 24%;
 }
 

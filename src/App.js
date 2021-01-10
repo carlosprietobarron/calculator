@@ -5,12 +5,12 @@ import ButtonPanel from './components/btnPanel.js';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <div className="calc-ui">
-        <Display result={0}/>
+        <Display result={0} />
         <ButtonPanel />
       </div>
-    </React.Fragment>
+    </>
   );
 }
 

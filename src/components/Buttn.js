@@ -3,7 +3,7 @@ import React from 'react';
 /* eslint-disable react/prop-types, no-console */
 function Buttn(props) {
   const { name, symbol } = props;
-  //console.log("symbol", symbol)
+  
   return (
     <div className="div-key">
       <button type="button" id={name} className="key-btn">{symbol}</button>

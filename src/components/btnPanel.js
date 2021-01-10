@@ -1,99 +1,99 @@
 import React from 'react';
-import Buttn from './Buttn.js';
+import Buttn from './Buttn';
 
 const group1 = [
   {
-    name: "AC",
-    symbol: "AC"
-  },
-  { 
-    name: "sign",
-    symbol:"+/-"
-  }, 
-  {
-    name: "percent",
-    symbol:"%"
+    name: 'AC',
+    symbol: 'AC',
   },
   {
-    name: "div",
-    symbol:"÷"
+    name: 'sign',
+    symbol: '+/-',
+  },
+  {
+    name: 'percent',
+    symbol:'%',
+  },
+  {
+    name: 'div',
+    symbol: '÷',
   }
 ];
 const group2 = [
   {
-    name: "seven",
-    symbol: "7"
+    name: 'seven',
+    symbol: '7',
   },
-  { 
-    name: "eight",
-    symbol:"8"
+  {
+    name: 'eight',
+    symbol: '8',
   }, 
   {
-    name: "nine",
-    symbol:"9"
+    name: 'nine',
+    symbol: '9',
   },
   {
-    name: "multiply",
-    symbol:"X"
+    name: 'multiply',
+    symbol: 'X',
   }
 ];
 const group3 = [
   {
-    name: "four",
-    symbol: "4"
+    name: 'four',
+    symbol: '4',
   },
   { 
-    name: "five",
-    symbol:"5"
+    name: 'five',
+    symbol:'5',
   }, 
   {
-    name: "six",
-    symbol:"6"
+    name: 'six',
+    symbol: '6',
   },
   {
-    name: "minus",
-    symbol:"-"
+    name: 'minus',
+    symbol: '-',
   }
 ];
 const group4 = [
   {
-    name: "one",
-    symbol: "1"
+    name: 'one',
+    symbol: '1',
   },
   { 
-    name: "two",
-    symbol:"2"
+    name: 'two',
+    symbol: '2',
   }, 
   {
-    name: "three",
-    symbol:"3"
+    name: 'three',
+    symbol: '3',
   },
   {
-    name: "add",
-    symbol:"+"
+    name: 'add',
+    symbol: '+',
   }
 ];
 const group5 = [
   {
-    name: "zero",
-    symbol: "0"
+    name: 'zero',
+    symbol: '0',
   },
   { 
-    name: "point",
-    symbol:"."
+    name: 'point',
+    symbol: '.',
   }, 
   {
-    name: "equal",
-    symbol:"="
+    name: 'equal',
+    symbol: '=',
   }
 ];
 
 
 function Btngroup(props){
-  console.log( "group 1", props);
+  console.log( 'group 1', props);
   const {  group } = props;
   return (
-    <div className="btn-group" id="loop1">
+    <div className='btn-group' id='loop1'>
         {group.map(btn=>(
           <Buttn name={btn.name} symbol={btn.symbol}/>
         ))}
@@ -103,7 +103,7 @@ function Btngroup(props){
 
 function ButtonPanel() {
   return (
-    <div className="btn-panel">
+    <div className='btn-panel'>
       <Btngroup group={group1}/>
       <Btngroup group={group2}/>
       <Btngroup group={group3}/>

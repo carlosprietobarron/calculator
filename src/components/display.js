@@ -2,9 +2,10 @@ import React from 'react';
 /* eslint-disable react/prop-types, no-console */
 function Display(props) {
   const { result } = props;
+
   return (
     <div className="calc-display">
-      <span>0.0</span>
+      <span>{result}</span>
     </div>
   );
 }

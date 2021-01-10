@@ -1,6 +1,7 @@
 import React from 'react';
 import Buttn from './Buttn';
 
+/* eslint-disable react/prop-types, no-console */
 const group1 = [
   {
     name: 'AC',
@@ -91,10 +92,10 @@ const group5 = [
 function Btngroup(props) {
   const { group } = props;
   return (
-    <div className='btn-group' id='loop1'>
-        {group.map(btn=>(
-          <Buttn name={btn.name} symbol={btn.symbol}/>
-        ))}
+    <div className="btn-group" id="loop1">
+      {group.map(btn=>(
+        <Buttn name={btn.name} symbol={btn.symbol}/>
+      ))}
     </div>
   );  
 }
@@ -102,13 +103,13 @@ function Btngroup(props) {
 function ButtonPanel() {
   return (
     <div className='btn-panel'>
-      <Btngroup group={group1}/>
-      <Btngroup group={group2}/>
-      <Btngroup group={group3}/>
-      <Btngroup group={group4}/>
-      <Btngroup group={group5}/>
+      <Btngroup group={group1} />
+      <Btngroup group={group2} />
+      <Btngroup group={group3} />
+      <Btngroup group={group4} />
+      <Btngroup group={group5} />
     </div>
   );
 }
-
+/* eslint-enable react/prop-types, no-console */
 export default ButtonPanel;

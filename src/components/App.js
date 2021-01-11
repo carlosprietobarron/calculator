@@ -1,7 +1,7 @@
-import './App.css';
+import '../App.css';
 import React from 'react';
-import Display from './components/display';
-import ButtonPanel from './components/btnPanel';
+import Display from './display';
+import ButtonPanel from './btnPanel';
 
 function App() {
   return (

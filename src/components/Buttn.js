@@ -9,7 +9,7 @@ const Buttn = props => {
       <button type="button" id={name} className="key-btn">{symbol}</button>
     </div>
   );
-}
+};
 
 export default Buttn;
 /* eslint-enable react/prop-types, no-console, arrow-body-style */

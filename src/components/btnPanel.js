@@ -98,7 +98,7 @@ const Btngroup = props => {
       ))}
     </div>
   );
-}
+};
 
 const ButtonPanel = () => {
   return (
@@ -110,6 +110,6 @@ const ButtonPanel = () => {
       <Btngroup group={group5} />
     </div>
   );
-}
+};
 /* eslint-enable react/prop-types, no-console, arrow-body-style */
 export default ButtonPanel;

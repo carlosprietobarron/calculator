@@ -8,6 +8,6 @@ const Display = props => {
       <span>{result}</span>
     </div>
   );
-}
+};
 /* eslint-enable react/prop-types, no-console, arrow-body-style */
 export default Display;

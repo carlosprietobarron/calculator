@@ -12,6 +12,6 @@ const App = () => {
       </div>
     </>
   );
-}
+};
 /* eslint-enable react/prop-types, no-console, arrow-body-style */
 export default App;

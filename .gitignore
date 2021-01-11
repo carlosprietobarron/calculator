@@ -4,9 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-.eslintrc.js
-.eslintrc.json
-.stylelintrc.json
+# .eslintrc.js
+# .eslintrc.json
+# .stylelintrc.json
 
 # testing
 /coverage

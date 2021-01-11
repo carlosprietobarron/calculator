@@ -1,7 +1,7 @@
 import React from 'react';
 import Buttn from './Buttn';
 
-/* eslint-disable react/prop-types, no-console */
+/* eslint-disable react/prop-types, no-console, arrow-body-style */
 const group1 = [
   {
     name: 'AC',
@@ -111,5 +111,5 @@ const ButtonPanel = () => {
     </div>
   );
 }
-/* eslint-enable react/prop-types, no-console */
+/* eslint-enable react/prop-types, no-console, arrow-body-style */
 export default ButtonPanel;

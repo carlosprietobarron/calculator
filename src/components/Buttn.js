@@ -1,6 +1,6 @@
 import React from 'react';
 
-/* eslint-disable react/prop-types, no-console */
+/* eslint-disable react/prop-types, no-console, arrow-body-style */
 const Buttn = props => {
   const { name, symbol } = props;
 
@@ -12,4 +12,4 @@ const Buttn = props => {
 }
 
 export default Buttn;
-/* eslint-enable react/prop-types, no-console */
+/* eslint-enable react/prop-types, no-console, arrow-body-style */

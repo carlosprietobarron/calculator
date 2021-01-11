@@ -1,5 +1,5 @@
 import React from 'react';
-/* eslint-disable react/prop-types, no-console */
+/* eslint-disable react/prop-types, no-console, arrow-body-style */
 const Display = props => {
   const { result } = props;
 
@@ -9,5 +9,5 @@ const Display = props => {
     </div>
   );
 }
-/* eslint-enable react/prop-types, no-console */
+/* eslint-enable react/prop-types, no-console, arrow-body-style */
 export default Display;

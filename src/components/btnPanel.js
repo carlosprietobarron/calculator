@@ -89,7 +89,7 @@ const group5 = [
   },
 ];
 
-function Btngroup(props) {
+const Btngroup = props => {
   const { group } = props;
   return (
     <div className="btn-group" id="loop1">
@@ -100,7 +100,7 @@ function Btngroup(props) {
   );
 }
 
-function ButtonPanel() {
+const ButtonPanel = () => {
   return (
     <div className="btn-panel">
       <Btngroup group={group1} />

@@ -1,6 +1,6 @@
 import React from 'react';
 /* eslint-disable react/prop-types, no-console */
-function Display(props) {
+const Display = props => {
   const { result } = props;
 
   return (

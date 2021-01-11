@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable react/prop-types, no-console */
-function Buttn(props) {
+const Buttn = props => {
   const { name, symbol } = props;
 
   return (

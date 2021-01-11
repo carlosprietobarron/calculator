@@ -3,7 +3,7 @@ import React from 'react';
 import Display from './display';
 import ButtonPanel from './btnPanel';
 
-function App() {
+const App = () => {
   return (
     <>
       <div className="calc-ui">

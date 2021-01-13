@@ -7,7 +7,7 @@ const calculate = (obj, btnName) => {
     operation: obj.operation,
   };
 
- if (btnName === '+/-') {
+  if (btnName === '+/-') {
     calculator.total *= -1;
     calculator.next = 0;
     calculator.operation = null;

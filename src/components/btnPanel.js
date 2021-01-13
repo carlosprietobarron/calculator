@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Buttn from './Buttn';
 
 /* eslint-disable react/prop-types, no-console, arrow-body-style */
@@ -111,5 +112,13 @@ const ButtonPanel = () => {
     </div>
   );
 };
+
+Btngroup.propTypes = {
+  group: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    symbol: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 /* eslint-enable react/prop-types, no-console, arrow-body-style */
 export default ButtonPanel;

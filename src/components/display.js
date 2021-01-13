@@ -1,5 +1,7 @@
 import React from 'react';
-/* eslint-disable react/prop-types, no-console, arrow-body-style */
+import PropTypes from 'prop-types';
+
+/* eslint-disable arrow-body-style */
 const Display = props => {
   const { result } = props;
 
@@ -9,5 +11,13 @@ const Display = props => {
     </div>
   );
 };
-/* eslint-enable react/prop-types, no-console, arrow-body-style */
+
+Display.propTypes = {
+  result: PropTypes.number,
+};
+
+Display.defaultProps = {
+  result: 0,
+};
+/* eslint-enable arrow-body-style */
 export default Display;

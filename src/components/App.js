@@ -6,17 +6,12 @@ import calculate from '../logic/calculate';
 /* eslint-disable react/prop-types, no-console, arrow-body-style */
 const App = () => {
   /* testing clculate */
-  const calculator = {
-    total: 0,
-    next: 0,
-    operation: '+',
-  };
-  btnName = '+';
-  const test = calculate(calculator, btnName);
+  const test = calculate({ total: 0, next: 0, operation: 'X' }, 'X');
+  const res = test.total.to_n;
   return (
     <>
       <div className="calc-ui">
-        <Display result={test} />
+        <Display result={res} />
         <ButtonPanel />
       </div>
     </>

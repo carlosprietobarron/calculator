@@ -1,0 +1,7 @@
+dist/*
+js/*
+build/*
+server/*
+node_modules/*
+libs/*
+src/reportWebVitals.js

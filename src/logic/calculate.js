@@ -20,28 +20,22 @@ const calculate = (obj, btnName) => {
   };
 
   const joinVal = (val1, val2, point) => {
-    console.log('joining', val1, val2, point);
     if (point) {
       if (isnum1(val1)) {
         let strNum = val1.toString();
         if (!strNum.includes('.')) strNum += '.';
-        console.log('val1', strNum);
         strNum += val2.toString();
-        console.log('after point', strNum);
         return parseFloat(strNum);
       }
       return parseFloat(val1);
     }
 
     if (isnum1(val1)) {
-      console.log('no point add', val2);
       if (val1 === 0) return val2.toString();
       return val1.toString() + val2.toString();
     }
     return val2;
   };
-
-  console.log('button pressed', btnName);
 
   if (btnName === '.') {
     calculator.point = true;
@@ -55,9 +49,8 @@ const calculate = (obj, btnName) => {
 
   // percentage
   if (btnName === '%') {
-    console.log('% pressed');
     if (!calculator.total && calculator.next !== null) {
-      if (calculator.total < 0) operate(calculator.total, -1, 'X');
+      if (calculator.next < 0) calculator.next = operate(calculator.next, -1, 'X');
       calculator.total = operate(calculator.next, 100, '÷');
       calculator.next = null;
       calculator.operation = 'X';
@@ -66,16 +59,6 @@ const calculate = (obj, btnName) => {
 
   // '=' if ready execute operation
   if (btnName === '=') {
-    console.log('entering equal', calculator);
-    // if (!calculator.total && calculator.next !== null && calculator.operation !== null) {
-    //   if (binOperator.includes(calculator.operation)) {
-    //     calculator.next = operate(calculator.next, calculator.next, calculator.operation);
-    //     calculator.point = false;
-    //     calculator.next = null;
-    //   }
-    //   return calculator;
-    // }
-
     if (calculator.total !== null && !calculator.next && calculator.operation !== null) {
       if (binOperator.includes(calculator.operation)) {
         calculator.next = operate(calculator.total, calculator.total, calculator.operation);
@@ -100,9 +83,7 @@ const calculate = (obj, btnName) => {
 
   // begining
   if (!calculator.total && !calculator.next && !calculator.operation) {
-    console.log('starting clicking with', btnName);
     if (isnum1(btnName)) {
-      console.log('number', btnName);
       calculator.total = null;
       calculator.next = joinVal(0, parseInt(btnName, 10), calculator.point);
       calculator.operation = null;
@@ -118,7 +99,6 @@ const calculate = (obj, btnName) => {
 
   // first operand next operand
   if (!calculator.total && calculator.next !== null && !calculator.operation) {
-    console.log('add ', btnName, ' to ', calculator.next);
     if (isnum1(btnName)) {
       calculator.next = joinVal(calculator.next, btnName, calculator.point);
     }
@@ -136,7 +116,6 @@ const calculate = (obj, btnName) => {
 
   // clicking when total not null
   if (calculator.total !== null && !calculator.next && !calculator.operation) {
-    console.log('total not null');
     if (isnum1(btnName)) {
       calculator.next = 0;
       calculator.next = joinVal(calculator.next, parseInt(btnName, 10), calculator.point);
@@ -152,7 +131,6 @@ const calculate = (obj, btnName) => {
 
   // one operand in total but an operation stored
   if (calculator.total !== null && !calculator.next && calculator.operation !== null) {
-    console.log('total, null, op', btnName);
     if (isnum1(btnName)) {
       if (!calculator.next) calculator.next = 0;
       calculator.next = joinVal(calculator.next, btnName, calculator.point);
@@ -165,14 +143,12 @@ const calculate = (obj, btnName) => {
       // calculator.total = calculator.total;
       calculator.next = null;
       calculator.operation = btnName;
-      console.log(calculator);
     }
     return calculator;
   }// one operand
 
   // two operand capturing next
   if (calculator.total !== null && calculator.next !== null && calculator.operation !== null) {
-    console.log('total, next, op');
     if (isnum1(btnName)) {
       calculator.next = joinVal(calculator.next, btnName, calculator.point);
     }

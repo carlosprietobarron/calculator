@@ -17,10 +17,7 @@ class App extends Component {
   }
 
   handleClick(buttonName) {
-    console.log(buttonName);
     this.sendToCalc(buttonName);
-    const { total } = this.state;
-    console.log(total);
   }
 
   sendToCalc(buttonName) {
@@ -34,7 +31,6 @@ class App extends Component {
   }
 
   updateState(calculator) {
-    console.log('setState', calculator);
     this.setState({
       total: calculator.total,
       next: calculator.next,

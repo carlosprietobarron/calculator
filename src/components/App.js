@@ -1,21 +1,62 @@
 import '../App.css';
-import React from 'react';
+import React, { Component } from 'react';
 import Display from './display';
 import ButtonPanel from './btnPanel';
 import calculate from '../logic/calculate';
-/* eslint-disable react/prop-types, no-console, arrow-body-style */
-const App = () => {
-  /* testing clculate */
-  const test = calculate({ total: 0, next: 0, operation: 'X' }, 'X');
-  const res = test.total.to_n;
-  return (
-    <>
-      <div className="calc-ui">
-        <Display result={res} />
-        <ButtonPanel />
-      </div>
-    </>
-  );
-};
-/* eslint-enable react/prop-types, no-console, arrow-body-style */
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+      point: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(buttonName) {
+    console.log(buttonName);
+    this.sendToCalc(buttonName);
+    const { total } = this.state;
+    console.log(total);
+  }
+
+  sendToCalc(buttonName) {
+    const {
+      total, next, operation, point,
+    } = this.state;
+    const calculator = calculate({
+      total, next, operation, point,
+    }, buttonName);
+    this.updateState(calculator);
+  }
+
+  updateState(calculator) {
+    console.log('setState', calculator);
+    this.setState({
+      total: calculator.total,
+      next: calculator.next,
+      operation: calculator.operation,
+      point: calculator.point,
+    });
+  }
+
+  render() {
+    let { total, next } = this.state;
+    if (!total) total = 0;
+    if (!next) next = 0;
+    if (next !== 0) total = next;
+    return (
+      <>
+        <div className="calc-ui">
+          <Display result={total} />
+          <ButtonPanel updateApp={this.handleClick} />
+        </div>
+      </>
+    );
+  }
+}
+
 export default App;

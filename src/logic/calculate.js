@@ -53,6 +53,17 @@ const calculate = (obj, btnName) => {
     return resetCalc(calculator);
   }
 
+  // percentage
+  if (btnName === '%') {
+    console.log('% pressed');
+    if (!calculator.total && calculator.next !== null) {
+      if (calculator.total < 0) operate(calculator.total, -1, 'X');
+      calculator.total = operate(calculator.next, 100, '÷');
+      calculator.next = null;
+      calculator.operation = 'X';
+    }
+  }
+
   // '=' if ready execute operation
   if (btnName === '=') {
     console.log('entering equal', calculator);
@@ -141,9 +152,13 @@ const calculate = (obj, btnName) => {
 
   // one operand in total but an operation stored
   if (calculator.total !== null && !calculator.next && calculator.operation !== null) {
+    console.log('total, null, op', btnName);
     if (isnum1(btnName)) {
       if (!calculator.next) calculator.next = 0;
       calculator.next = joinVal(calculator.next, btnName, calculator.point);
+    }
+    if (btnName === '+/-') {
+      calculator.total *= -1;
     }
     if (binOperator.includes(btnName)) {
       // calculator.total = operate(calculator.total, calculator.total, calculator.operation);
@@ -157,8 +172,12 @@ const calculate = (obj, btnName) => {
 
   // two operand capturing next
   if (calculator.total !== null && calculator.next !== null && calculator.operation !== null) {
+    console.log('total, next, op');
     if (isnum1(btnName)) {
       calculator.next = joinVal(calculator.next, btnName, calculator.point);
+    }
+    if (btnName === '+/-') {
+      calculator.next *= -1;
     }
     if (binOperator.includes(btnName)) {
       calculator.total = operate(calculator.total, calculator.next, calculator.operation);

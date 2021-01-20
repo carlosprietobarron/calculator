@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Buttn from './Buttn';
 
 /* eslint-disable react/prop-types, no-console, arrow-body-style */
@@ -90,34 +89,42 @@ const group5 = [
   },
 ];
 
-const Btngroup = props => {
-  const { group } = props;
-  return (
-    <div className="btn-group" id="loop1">
-      {group.map(btn => (
-        <Buttn key={btn.name} name={btn.name} symbol={btn.symbol} />
-      ))}
-    </div>
-  );
-};
+const ButtonPanel = props => {
+  console.log('props panel', props);
+  const handleClick = buttonName => {
+    const { updateApp } = props;
+    updateApp(buttonName);
+  };
 
-const ButtonPanel = () => {
   return (
     <div className="btn-panel">
-      <Btngroup group={group1} />
-      <Btngroup group={group2} />
-      <Btngroup group={group3} />
-      <Btngroup group={group4} />
-      <Btngroup group={group5} />
+      <div className="btn-group" id="loop1">
+        {group1.map(btn => (
+          <Buttn updateParent={handleClick} key={btn.name} name={btn.name} symbol={btn.symbol} />
+        ))}
+      </div>
+      <div className="btn-group" id="loop2">
+        {group2.map(btn => (
+          <Buttn updateParent={handleClick} key={btn.name} name={btn.name} symbol={btn.symbol} />
+        ))}
+      </div>
+      <div className="btn-group" id="loop3">
+        {group3.map(btn => (
+          <Buttn updateParent={handleClick} key={btn.name} name={btn.name} symbol={btn.symbol} />
+        ))}
+      </div>
+      <div className="btn-group" id="loop4">
+        {group4.map(btn => (
+          <Buttn updateParent={handleClick} key={btn.name} name={btn.name} symbol={btn.symbol} />
+        ))}
+      </div>
+      <div className="btn-group" id="loop5">
+        {group5.map(btn => (
+          <Buttn updateParent={handleClick} key={btn.name} name={btn.name} symbol={btn.symbol} />
+        ))}
+      </div>
     </div>
   );
-};
-
-Btngroup.propTypes = {
-  group: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    symbol: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 /* eslint-enable react/prop-types, no-console, arrow-body-style */

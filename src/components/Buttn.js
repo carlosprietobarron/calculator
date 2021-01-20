@@ -4,10 +4,13 @@ import PropTypes from 'prop-types';
 /* eslint-disable react/prop-types, no-console, arrow-body-style */
 const Buttn = props => {
   const { name, symbol } = props;
+  function handleClick() {
+    props.updateParent(symbol);
+  }
 
   return (
     <div className="div-key">
-      <button type="button" id={name} className="key-btn">{symbol}</button>
+      <button onClick={handleClick} type="button" id={name} className="key-btn">{symbol}</button>
     </div>
   );
 };

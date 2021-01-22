@@ -1,8 +1,12 @@
 import '../App.css';
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './home';
 import Display from './display';
 import ButtonPanel from './btnPanel';
 import calculate from '../logic/calculate';
+import Navbar from './navbar';
+import Quote from './quote';
 
 function App() {
   const [opObj, setopObj] = useState({
@@ -13,15 +17,19 @@ function App() {
   });
 
   const updateState = calculator => {
+    console.log('update state', calculator);
+    console.log(opObj);
     setopObj({
       total: calculator.total,
       next: calculator.next,
       operation: calculator.operation,
       point: calculator.point,
     });
+    console.log(opObj);
   };
 
   const handleClick = buttonName => {
+    console.log('handleclick', buttonName, opObj);
     const {
       total, next, operation, point,
     } = opObj;
@@ -44,10 +52,17 @@ function App() {
 
   return (
     <>
-      <div className="calc-ui">
-        <Display result={total} />
-        <ButtonPanel updateApp={handleClick} />
-      </div>
+      <Router>
+        <div className="calc-ui">
+          <Navbar />
+          <Home />
+          <Switch>
+            <Route path="/display" component={Display} />
+            <Route path="/display" component={() => <ButtonPanel updateApp={handleClick} />} />
+            <Quote />
+          </Switch>
+        </div>
+      </Router>
     </>
   );
 }

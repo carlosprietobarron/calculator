@@ -46,9 +46,15 @@ function Calculator() {
   if (next !== 0) total = next;
 
   return (
-    <div className="calc-ui">
-      <Display result={total} />
-      <ButtonPanel updateApp={handleClick} />
+    <div id="calculator">
+      <div classNamee="calc-ui">
+        <h1>Math Magicians</h1>
+        <p>Lets do some Math calculations, will you?</p>
+      </div>
+      <div className="calc-ui">
+        <Display result={total} />
+        <ButtonPanel updateApp={handleClick} />
+      </div>
     </div>
   );
 }

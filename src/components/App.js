@@ -9,8 +9,8 @@ import Quote from './quote';
 function App() {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/calculator" component={Calculator} />

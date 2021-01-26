@@ -12,19 +12,15 @@ function Calculator() {
   });
 
   const updateState = calculator => {
-    console.log('update state', calculator);
-    console.log(opObj);
     setopObj({
       total: calculator.total,
       next: calculator.next,
       operation: calculator.operation,
       point: calculator.point,
     });
-    console.log(opObj);
   };
 
   const handleClick = buttonName => {
-    console.log('handleclick', buttonName, opObj);
     const {
       total, next, operation, point,
     } = opObj;
@@ -47,7 +43,7 @@ function Calculator() {
 
   return (
     <div id="calculator">
-      <div classNamee="calc-ui">
+      <div className="calc-ui">
         <h1>Math Magicians</h1>
         <p>Lets do some Math calculations, will you?</p>
       </div>
